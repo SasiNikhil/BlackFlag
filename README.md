@@ -39,13 +39,13 @@ The application features employee management, secure authentication, and a moder
 ### HR Admin
 - **Email:** sarah.chen@blackflag.hr | **Password:** Admin123!
 
-### Employee Accounts (100 available)
+### Employee Accounts 
 - **Email:** georgi.facello@blackflag.hr | **Password:** Staff123!
 - **Email:** bezalel.simmel@blackflag.hr | **Password:** Staff123!
 - **Email:** parto.bamford@blackflag.hr | **Password:** Staff123!
 
-**All 100 employee credentials** use password: `Staff123!`  
-See full list in [`docs/CREDENTIALS.md`](docs/CREDENTIALS.md)
+**Other employee credentials** use password: `Staff123!`  
+ full list in [`docs/CREDENTIALS.md`](docs/CREDENTIALS.md)
 
 ## Architecture Overview
 
