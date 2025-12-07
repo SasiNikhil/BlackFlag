@@ -197,7 +197,33 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [leaveBalances, leaveRequests, documents, messages, isAuthenticated, user])
 
   // Auth functions
-  const login = (email: string, password: string): boolean => {
+  const login = async (email: string, password: string): Promise<boolean> => {
+    // Try backend auth first if API is enabled
+    if (USE_API) {
+      try {
+        const { loginApi } = await import('../services/api')
+        const response = await loginApi(email, password)
+        if (response.success && response.user) {
+          setUser({
+            id: generateId('usr'),
+            employee_id: '',
+            email: response.user.email,
+            first_name: response.user.name.split(' ')[0],
+            last_name: response.user.name.split(' ')[1] || '',
+            role: response.user.role,
+            avatar_url: undefined,
+          })
+          setIsAuthenticated(true)
+          addNotification(response.message, 'success')
+          return true
+        }
+      } catch (error) {
+        console.error('Backend auth failed:', error)
+        // Fall through to mock auth
+      }
+    }
+
+    // Fallback to mock auth
     const testUser = testUsers.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password === password)
     if (!testUser) {
       addNotification('Invalid email or password', 'error')

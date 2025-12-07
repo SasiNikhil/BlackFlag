@@ -8,7 +8,7 @@ import logging
 
 from src.config import settings
 from src.database import init_db
-from src.routes import health, employees
+from src.routes import health, employees, auth
 
 # Configure logging
 logging.basicConfig(
@@ -61,9 +61,7 @@ app.add_middleware(
 # Include routers
 app.include_router(health.router, tags=["Health"])
 app.include_router(employees.router, prefix=settings.api_prefix, tags=["Employees"])
-
-# Future routers for HR platform
-# app.include_router(auth.router, prefix=settings.api_prefix, tags=["Authentication"])
+app.include_router(auth.router, prefix=settings.api_prefix, tags=["Authentication"])
 
 
 @app.get("/")

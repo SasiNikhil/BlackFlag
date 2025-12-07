@@ -31,6 +31,17 @@ export const checkReady = async () => {
   return response.data
 }
 
+// Auth API calls
+export const login = async (email: string, password: string) => {
+  const response = await api.post('/api/v1/auth/login', { email, password })
+  return response.data
+}
+
+export const logout = async () => {
+  const response = await api.post('/api/v1/auth/logout')
+  return response.data
+}
+
 // Employee API calls
 export const getEmployees = async (skip = 0, limit = 1000) => {
   const response = await api.get(`/api/v1/employees?skip=${skip}&limit=${limit}`)
