@@ -23,11 +23,6 @@ The application features employee management, secure authentication, and a moder
 - **CI/CD Pipeline:** GitHub Actions for automated deployment
 - **Monitoring:** CloudWatch dashboards and alerts
 
-## Cost Estimate
-
-Running this stack 24/7 in `us-west-2` costs approximately **$130/month**.
-- NAT Gateways and the Load Balancer are the biggest fixed costs
-- For development, you can reduce this by removing the NAT Gateways or shutting down resources when not in use
 
 ## Documentation
 
