@@ -33,6 +33,20 @@ The application features employee management, secure authentication, and a moder
 | **[AWS Infrastructure](docs/ARCHITECTURE.md)** | VPC topology, ECS/RDS configuration, security groups, and cost analysis |
 | **[Deployment Guide](docs/DEPLOYMENT.md)** | Comprehensive deployment instructions and CI/CD setup |
 
+
+## Login Credentials
+
+### HR Admin
+- **Email:** sarah.chen@blackflag.hr | **Password:** Admin123!
+
+### Employee Accounts (100 available)
+- **Email:** georgi.facello@blackflag.hr | **Password:** Staff123!
+- **Email:** bezalel.simmel@blackflag.hr | **Password:** Staff123!
+- **Email:** parto.bamford@blackflag.hr | **Password:** Staff123!
+
+**All 100 employee credentials** use password: `Staff123!`  
+See full list in [`docs/CREDENTIALS.md`](docs/CREDENTIALS.md)
+
 ## Architecture Overview
 
 ```
