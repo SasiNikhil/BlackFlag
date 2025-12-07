@@ -1,13 +1,12 @@
 # Login Credentials
 
-## HR Admin Accounts (2 total)
+## HR Admin Accounts (1 total)
 
 | Name | Email | Password | Role |
 |------|-------|----------|------|
 | Sarah Chen | sarah.chen@blackflag.hr | Admin123! | HR Admin |
-| Patricia Anderson | hr.manager@blackflag.hr | HRPass123! | HR Admin |
 
-## Employee Accounts (100 total)
+## Employee Accounts (100)
 
 **Password for all employees:** `Staff123!`
 
@@ -114,9 +113,3 @@
 | 99 | Valter Sullins | valter.sullins@blackflag.hr |
 | 100 | Hironobu Haraldson | hironobu.haraldson@blackflag.hr |
 
-## Notes
-
-- All 10,000 employees are visible in the directory, but only the first 100 have login credentials
-- HR Admin accounts have full access to all features
-- Employee accounts have limited access (own profile, leave requests, documents)
-- Passwords are for testing purposes only - use secure passwords in production
